@@ -31,7 +31,7 @@ class Song
   def self.artists
     uartists = @@artists.sort
     uartists.each_with_index do |artist, index|
-      uartists.shift if artist == uartists[index + 1]
+      uartists.delete_at(index + 1) if artist == uartists[index + 1]
     end
     uartists
   end
