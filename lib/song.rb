@@ -29,11 +29,7 @@ class Song
   end
   
   def self.artists
-    uartists = @@artists
-    uartists.each_with_index do |artist, index|
-      uartists.delete_at(index + 1) if artist == uartists[index + 1]
-    end
-    uartists
+    @@artists.uniq
   end
   
   def self.genre_count
