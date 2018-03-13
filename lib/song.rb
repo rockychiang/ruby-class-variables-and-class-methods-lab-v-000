@@ -21,8 +21,9 @@ class Song
   end
   
   def self.genres
-    ugenres = @@genres.each do ||
-      
+    ugenres = @@genres.sort
+    ugenres.each_with_index do |genre, index|
+      ugenres.shift if genre == ugenres[index + 1]
     end
   end
   
