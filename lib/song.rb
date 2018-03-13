@@ -12,7 +12,7 @@ class Song
     @genre = genre
     @@artists << artist if !@@artists.include?(artist)
     @@genres << genre if !@@genres.include?(genre)
-    self.genre_count[]
+    self.genre_count[genre] += 1
     @@count += 1
   end
   
