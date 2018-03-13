@@ -29,8 +29,7 @@ class Song
   def self.genre_count
     gcount = {}
     @@genres.uniq.each do |genre|
-      @@genres.select{|i| genre == i}.count
-      gcount[genre] = 
+      gcount[genre] = @@genres.select{|i| genre == i}.count
   end
   
   def self.artist_count
