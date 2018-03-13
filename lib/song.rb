@@ -29,7 +29,7 @@ class Song
   end
   
   def self.artists
-    uartists = @@artists.sort
+    uartists = @@artists
     uartists.each_with_index do |artist, index|
       uartists.delete_at(index + 1) if artist == uartists[index + 1]
     end
