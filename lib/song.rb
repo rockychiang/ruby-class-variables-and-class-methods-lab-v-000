@@ -21,11 +21,7 @@ class Song
   end
   
   def self.genres
-    ugenres = @@genres.sort
-    ugenres.each_with_index do |genre, index|
-      ugenres.shift if genre == ugenres[index + 1]
-    end
-    ugenres
+    ugenres = @@genres.uniq
   end
   
   def self.artists
