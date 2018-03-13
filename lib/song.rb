@@ -25,6 +25,7 @@ class Song
     ugenres.each_with_index do |genre, index|
       ugenres.shift if genre == ugenres[index + 1]
     end
+    ugenres
   end
   
   def self.artists
