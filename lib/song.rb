@@ -21,7 +21,9 @@ class Song
   end
   
   def self.genres
-    @@genres
+    ugenres = @@genres.each do ||
+      
+    end
   end
   
   def self.artists
