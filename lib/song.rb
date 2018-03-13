@@ -30,9 +30,10 @@ class Song
   
   def self.artists
     uartists = @@artists.sort
-    ugenres.each_with_index do |genre, index|
-      ugenres.shift if genre == ugenres[index + 1]
+    uartists.each_with_index do |artist, index|
+      uartists.shift if artist == uartists[index + 1]
     end
+    uartists
   end
   
   def self.genre_count
